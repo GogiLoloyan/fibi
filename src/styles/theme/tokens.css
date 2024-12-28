@@ -1,0 +1,73 @@
+/**
+ * Light Theme (default)
+ */
+:root {
+  /* Secondary Colors - Light Theme */
+  --color-m800: #ed0d92;
+  --color-m400: #faa8d9;
+  --color-m300: #fdd9ee;
+  --color-p800: #8930cf;
+  --color-g800: #26a693;
+  --color-b800: #0d6aed;
+  --color-o800: #f57200;
+  --color-r800: #d02525;
+  --color-r300: #f9dcdc;
+
+  /* Neutral Colors - Light Theme */
+  --color-n800: #16191d;
+  --color-n700: #363c45;
+  --color-n600: #434b56;
+  --color-n500: #5a6372;
+  --color-n450: #9aa0ac;
+  --color-n400: #d4d8dd;
+  --color-n350: #dfe3ec;
+  --color-n300: #e7e9ef;
+  --color-n200: #f2f4f8;
+  --color-n100: #ffffff;
+  --color-f-white: #ffffff;
+  --color-f-black: #111318;
+  --color-header: #ffffff80;
+}
+
+/**
+ * Dark Theme (checking for code applied theme)
+ */
+[data-theme="dark"] {
+  /* Secondary Colors - Dark Theme */
+  --color-m800: #f325a0;
+  --color-m400: #61053c;
+  --color-m300: #30031e;
+  --color-p800: #9545d4;
+  --color-g800: #2fd0b8;
+  --color-b800: #257bf3;
+  --color-o800: #ff851a;
+  --color-r800: #dd3c3c;
+  --color-r300: #390a0a;
+
+  /* Neutral Colors - Dark Theme */
+  --color-n800: #e6eaef;
+  --color-n700: #e0e5eb;
+  --color-n600: #c7cfdb;
+  --color-n500: #8f97a3;
+  --color-n450: #535a65;
+  --color-n400: #25282d;
+  --color-n350: #1a1d23;
+  --color-n300: #1e2229;
+  --color-n200: #111318;
+  --color-n100: #181b21;
+  --color-f-white: #ffffff;
+  --color-f-black: #111318;
+  --color-header: #181b2180;
+}
+
+.color-n500 {
+  color: var(--color-n500);
+}
+
+.color-n700 {
+  color: var(--color-n700);
+}
+
+.color-n800 {
+  color: var(--color-n800);
+}

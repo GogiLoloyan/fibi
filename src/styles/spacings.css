@@ -1,0 +1,23 @@
+/* Spacings */
+:root {
+  --spacing-xxs: 8px;
+  --spacing-xs: 12px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 32px;
+  --spacing-xl: 48px;
+  --spacing-xxl: 64px;
+  --spacing-3xl: 72px;
+  --spacing-4xl: 120px;
+}
+
+/* Other tokens */
+:root {
+  --page-padding: var(--spacing-3xl);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --page-padding: 20px;
+  }
+}
