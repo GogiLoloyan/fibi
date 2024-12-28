@@ -1,0 +1,102 @@
+.container {
+  position: relative;
+  display: grid;
+  pointer-events: all;
+}
+
+.innerContainer {
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.scrollContainer {
+  height: 128px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+
+  @media (max-width: 768px) {
+    height: 72px;
+  }
+}
+
+.logoTrack {
+  display: inline-block;
+  animation: scroll 20s linear infinite;
+  white-space: nowrap;
+}
+
+.logoWrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3rem;
+  vertical-align: middle;
+
+  @media (max-width: 768px) {
+    padding: 0 1.5rem;
+  }
+}
+
+.logo {
+  width: auto;
+  height: 32px;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+
+  @media (max-width: 768px) {
+    height: 20px;
+  }
+}
+
+.logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(
+      -33.333%
+    ); /* Move by one-third since we tripled the logos */
+  }
+}
+
+/* Pause animation on hover */
+.scrollContainer:hover .logoTrack {
+  animation-play-state: paused;
+}
+
+.leftEffect {
+  background: linear-gradient(to right, var(--color-n200) 0%, transparent 100%);
+  position: absolute;
+  left: calc(-1 * var(--page-padding));
+  width: 22vw;
+  height: 100%;
+  z-index: 1;
+
+  @media (max-width: 768px) {
+    width: 33vw;
+  }
+}
+
+.rightEffect {
+  background: linear-gradient(to left, var(--color-n200) 0%, transparent 100%);
+  position: absolute;
+  right: calc(-1 * var(--page-padding));
+  width: 22vw;
+  height: 100%;
+  z-index: 1;
+
+  @media (max-width: 768px) {
+    width: 33vw;
+  }
+}

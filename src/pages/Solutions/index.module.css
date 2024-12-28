@@ -1,0 +1,14 @@
+.page {
+  display: grid;
+  gap: 120px;
+
+  @media (max-width: 768px) {
+    gap: 64px;
+  }
+}
+
+.metricSection {
+  @media (min-width: 769px) {
+    margin-bottom: -48px;
+  }
+}

@@ -1,0 +1,45 @@
+.heroSection {
+  gap: unset;
+  pointer-events: none;
+}
+
+.heroSectionMain {
+  display: grid;
+  padding: 108px 0 120px 0;
+  z-index: 0;
+  max-width: fit-content;
+}
+
+.heroTitle {
+  margin-bottom: var(--spacing-lg);
+  pointer-events: all;
+
+  @media (max-width: 768px) {
+    font-size: 1.875rem;
+    margin-bottom: var(--spacing-sm);
+  }
+}
+
+.heroSubTitle {
+  font-size: 1.375rem;
+  padding-bottom: var(--spacing-xl);
+  width: max-content;
+  pointer-events: all;
+
+  @media (max-width: 768px) {
+    font-size: var(--font-size-base);
+  }
+}
+
+.gradientTitle {
+  background: linear-gradient(to right, #ed0d92 0%, #9b085f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.heroActions {
+  display: flex;
+  gap: var(--spacing-sm);
+  pointer-events: all;
+}
