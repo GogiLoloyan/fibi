@@ -78,7 +78,7 @@ const Menu: React.FC = () => {
           key={item.path}
           ref={(el) => setRef(el, item.path)}
           href={item.path}
-          onClick={(e) => handleNavClick(item.path)}
+          onClick={() => handleNavClick(item.path)}
           className={`${styles.navItem} text-base leading-normal ${
             pathname === item.path ? `${styles.navItemActive} font-bold` : ""
           } `}

@@ -1,5 +1,3 @@
-import Section from "@/components/Section";
-
 import Pattern from "@/components/Pattern";
 import MetricsSection from "@/components/MetricsSection";
 

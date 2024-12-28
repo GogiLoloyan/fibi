@@ -5,7 +5,7 @@ interface BlockProps {
   children: React.ReactNode;
   className?: string;
   compact?: boolean;
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 const Block: React.FC<BlockProps> = ({
