@@ -3,14 +3,18 @@ import classNames from "classnames";
 import Block from "../../../../components/Block";
 import Section from "../../../../components/Section";
 
+import BrandIcon from "../../../../public/icons/brand.svg";
+
 import CRMIcon from "../../../../public/icons/crm.svg";
 import PieChartIcon from "../../../../public/icons/pie-chart.svg";
 import SettingIcon from "../../../../public/icons/setting.svg";
+import DesignIcon from "../../../../public/icons/design.svg";
 
 const iconsMap = {
   crm: CRMIcon,
   "pie-chart": PieChartIcon,
   setting: SettingIcon,
+  design: DesignIcon,
 };
 
 import styles from "./index.module.css";
@@ -98,6 +102,26 @@ const solutions: Solution[] = [
       },
     ],
   },
+  {
+    icon: "design",
+    title: "Code-Free Website Builder",
+    description: "Create, modify, and maintain your functional website.",
+    themeColor: "color-b800",
+    features: [
+      {
+        title: "Feature 1",
+        description: "Description 1",
+      },
+      {
+        title: "Feature 2",
+        description: "Description 2",
+      },
+      {
+        title: "Feature 3",
+        description: "Description 3",
+      },
+    ],
+  },
 ];
 
 const SolutionsSection = () => {
@@ -124,7 +148,7 @@ const SolutionsSection = () => {
               {solution.features.map((feature) => {
                 return (
                   <div key={feature.title} className={styles.feature}>
-                    {/* <Icon className={styles.featureIcon} /> */}
+                    <BrandIcon className={styles.featureIcon} />
                     <h3
                       className={classNames(
                         styles.featureTitle,
