@@ -1,0 +1,61 @@
+.bgPatternContainer {
+  position: absolute;
+  height:var(--pattern-height);
+  width: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.bgPattern {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 700px;
+
+  @media (max-width: 768px) {
+    height: auto;
+    width: 160%;
+  }
+}
+
+.bgPatternGradient {
+  width: 1070px;
+  right: 0;
+  height: var(--pattern-height);
+  z-index: 1;
+  position: absolute;
+  pointer-events: none;
+  background: radial-gradient(
+      ellipse 110% 100% at 70% 35%,
+      transparent 50%,
+      var(--color-n200) 60%
+    ),
+    radial-gradient(
+      ellipse 80% 70% at 70% 35%,
+      transparent 20%,
+      var(--color-n200) 90%
+    );
+
+  @media (max-width: 768px) {
+    background: radial-gradient(
+        ellipse 80% 50% at 70% 25%,
+        transparent 50%,
+        var(--color-n200) 60%
+      ),
+      radial-gradient(
+        ellipse 110% 100% at 80% 5%,
+        transparent 20%,
+        var(--color-n200) 120%
+      );
+  }
+}
+
+.bgPattern > g > path {
+  transition: fill 0.3s ease;
+  fill: var(--color-n350);
+  will-change: fill;
+}
+
+.bgPattern > g > path:hover {
+  fill: var(--color-m800);
+}

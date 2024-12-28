@@ -1,0 +1,31 @@
+.container {
+  display: grid;
+  gap: 40px;
+  padding-inline: var(--page-padding);
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    gap: 24px;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.sectionTitle {
+  text-align: left;
+  color: var(--color-n800);
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+}
+
+.actionElement {
+  display: flex;
+  justify-content: flex-end;
+}

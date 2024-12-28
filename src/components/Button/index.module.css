@@ -1,0 +1,221 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative; /* Needed for pseudo-elements */
+  overflow: hidden; /* Prevents gradient overflow */
+}
+
+.text {
+  white-space: nowrap;
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Gradient glow effect base */
+.button.primaryFill::before,
+.button.inverseFill::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 80% 100% at 50% 100%,
+    #ed0d92 0%,
+    #ed0d921a 50%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+/* Content positioning */
+.button > * {
+  z-index: 2;
+}
+
+/* Hover state - lighter glow */
+.button.primaryFill:hover::before,
+.button.inverseFill:hover:before {
+  opacity: 1;
+}
+
+/* Active/Pressed state - stronger glow */
+.button.primaryFill:active::before,
+.button.inverseFill:active:before {
+  opacity: 1;
+  background: radial-gradient(
+    110% 110% at 50% 100%,
+    rgb(237, 13, 146) 0%,
+    rgba(237, 13, 146, 0.1) 60%
+  );
+}
+
+/* Variants */
+/* primaryFill */
+.primaryFill {
+  color: var(--color-n100);
+  background-color: var(--color-n800);
+}
+
+.primaryFill:hover {
+}
+
+.primaryFill:active {
+}
+
+/* primaryOutline */
+.primaryOutline {
+  border: 1px solid var(--color-n800);
+  background-color: transparent;
+}
+
+.primaryOutline:hover {
+  background-color: var(--color-m400);
+}
+
+.primaryOutline:active {
+  background-color: var(--color-m450);
+}
+
+/* primaryText */
+.primaryText {
+  background-color: transparent;
+}
+
+.primaryText:hover {
+  background-color: var(--color-m300);
+}
+
+.primaryText:active {
+  background-color: var(--color-m400);
+}
+
+/* secondaryFill */
+.secondaryFill {
+  background-color: var(--color-n300);
+  color: var(--color-n800);
+}
+
+.secondaryFill:hover {
+  background-color: var(--color-n400);
+}
+
+.secondaryFill:active {
+  background-color: var(--color-n450);
+}
+
+/* inverseFill */
+.inverseFill {
+  background-color: var(--color-n800);
+}
+
+.inverseFill:hover {
+  background-color: var(--color-n100);
+}
+
+.inverseFill:active {
+}
+
+/* Sizes */
+.large {
+  height: 48px;
+  padding: 0 24px;
+  border-radius: 14px;
+  font-size: var(--font-size-base);
+}
+
+.medium {
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 12px;
+  font-size: var(--font-size-sm);
+}
+
+.small {
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 10px;
+  font-size: var(--font-size-sm);
+}
+
+/* States */
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.disabled:hover {
+  /* Disabled hover state */
+}
+
+/* Icon styles */
+.leftIcon {
+  display: inline-flex;
+  align-items: center;
+}
+
+.rightIcon {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Full width */
+.fullWidth {
+  width: 100%;
+}
+
+/* Focus state with double border */
+.button:focus-visible {
+  outline: none;
+}
+
+.button:focus-visible::before,
+.button:focus-visible::after {
+  content: "";
+  position: absolute;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* Inner white border */
+.button:focus-visible::before {
+  inset: -1px;
+  border: 1px solid white;
+}
+
+/* Outer pink border */
+.button:focus-visible::after {
+  inset: -2px;
+  border: 1px solid var(--color-m800);
+}
+
+/* Firefox and other browsers fallback */
+@supports not selector(:focus-visible) {
+  .button:focus::before,
+  .button:focus::after {
+    content: "";
+    position: absolute;
+    border-radius: inherit;
+    pointer-events: none;
+  }
+
+  .button:focus::before {
+    inset: -1px;
+    border: 1px solid white;
+  }
+
+  .button:focus::after {
+    inset: -2px;
+    border: 1px solid var(--color-n800);
+  }
+}
+
+/* Loading state (optional) */
+.loading {
+  /* Loading state styles */
+}

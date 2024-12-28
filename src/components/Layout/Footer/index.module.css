@@ -1,0 +1,10 @@
+.container {
+  gap:  56px;
+  padding: 96px 183px;
+  background-color: var(--color-header);
+  
+  @media (max-width: 768px) {
+    gap:  40px;
+    padding: 40px 20px 72px 20px;
+  }
+}

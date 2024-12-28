@@ -1,0 +1,34 @@
+.block {
+  display: flex;
+  padding: var(--spacing-md) 9vw;
+
+  @media (max-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
+}
+
+.metricItem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: var(--spacing-md) 0;
+  color: var(--color-n800);
+
+  @media (max-width: 768px) {
+    gap: 0;
+    align-items: flex-start;
+  }
+}
+
+.metricNumber {
+  font-size: 1.5rem;
+}
+
+.metricDescription {
+  font-size: 0.875rem;
+}
