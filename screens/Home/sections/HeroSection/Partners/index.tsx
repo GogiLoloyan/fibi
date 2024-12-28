@@ -9,7 +9,7 @@ const logos: Logo[] = [
   { name: "Apple TV", imgUrl: "/images/partners/appletv.png" },
   { name: "Roku", imgUrl: "/images/partners/roku.png" },
   { name: "Tizen", imgUrl: "/images/partners/tizen.png" },
-  { name: "webOS", imgUrl: "/images/partners/webos.png" },
+  { name: "webos", imgUrl: "/images/partners/web-os.png" },
   { name: "Android TV", imgUrl: "/images/partners/androidtv.png" },
   { name: "Fire TV", imgUrl: "/images/partners/firetv.png" },
 ];
