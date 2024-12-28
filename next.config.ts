@@ -1,15 +1,20 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  experimental: {
-    turbo: {
-      rules: {
-        "*.svg": {
-          loaders: ["@svgr/webpack"],
-          as: "*.js",
-        },
+  module: {
+    rules: [
+      {
+        test: /\.svg$/, // Match all `.svg` files
+        use: [
+          {
+            loader: "@svgr/webpack", // Convert SVG to React components
+            options: {
+              icon: true, // Optional: Adjust SVGR options here
+            },
+          },
+        ],
       },
-    },
+    ],
   },
 };
 
