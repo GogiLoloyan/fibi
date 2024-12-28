@@ -52,6 +52,7 @@
     #ed0d92 93%
   );
   position: relative;
+  overflow: hidden;
 
   @media (max-width: 768px) {
     align-items: stretch;
@@ -100,6 +101,7 @@ html[data-theme="dark"] .banner {
   top: 10px;
   right: 21%;
   height: 115%;
+  width: auto;
 
   @media (max-width: 768px) {
     top: 40px;
