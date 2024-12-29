@@ -6,6 +6,10 @@
   gap: var(--spacing-xxl);
   background-color: var(--color-header);
 
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--color-n300);;
+
   @media (max-width: 768px) {
     padding-inline: var(--spacing-sm);
   }
@@ -35,8 +39,30 @@
   display: flex;
   gap: var(--spacing-xs);
   margin-bottom: var(--spacing-sm);
+
+  @media (max-width: 768px) {
+    gap: 6px;
+  }
 }
 
-.themeButton {
-  padding: 0 10px;
+.themeButton,
+.menuButton {
+  width: 40px;
+  padding: 0 10px !important;
+}
+
+.themeButton svg,
+.menuButton svg {
+  width: 20px;
+  height: 20px;
+}
+
+.menuButton {
+  display: none !important;
+
+  @media (max-width: 768px) {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
 }

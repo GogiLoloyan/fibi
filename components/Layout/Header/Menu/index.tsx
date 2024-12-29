@@ -1,13 +1,10 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import Link from "next/link";
-import styles from "./index.module.css";
 import { usePathname, useRouter } from "next/navigation";
 
-type MenuItem = {
-  id: string;
-  label: string;
-  path: string;
-};
+import styles from "./index.module.css";
+
+import { menuItems } from "../data";
 
 type MenuRefs = Map<string, HTMLAnchorElement>;
 
@@ -15,13 +12,6 @@ interface UnderlineStyle {
   width?: string;
   transform?: string;
 }
-
-const menuItems: MenuItem[] = [
-  { id: "home", label: "Home", path: "/" },
-  { id: "solutions", label: "Solutions", path: "/solutions" },
-  { id: "blog", label: "Blog", path: "/blog" },
-  { id: "contact", label: "Contact", path: "/contact" },
-];
 
 const Menu: React.FC = () => {
   const router = useRouter();
@@ -83,8 +73,14 @@ const Menu: React.FC = () => {
             pathname === item.path ? `${styles.navItemActive} font-bold` : ""
           } `}
         >
-          <span className={`${styles.navItemText} navItemText font-medium`}>{item.label}</span>
-          <span className={`${styles.navItemActiveText} navItemActiveText font-bold`}>{item.label}</span>
+          <span className={`${styles.navItemText} navItemText font-medium`}>
+            {item.label}
+          </span>
+          <span
+            className={`${styles.navItemActiveText} navItemActiveText font-bold`}
+          >
+            {item.label}
+          </span>
         </Link>
       ))}
       <span className={styles.navUnderline} style={underlineStyle} />
