@@ -24,11 +24,12 @@
   }
 }
 
-.description {
-  margin-bottom: 24px;
-}
+/* .description {
+  
+} */
 
 .features {
+  margin-top: 24px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 12px;
