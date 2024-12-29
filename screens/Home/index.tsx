@@ -6,7 +6,7 @@ import BlogSection from "./sections/BlogSection";
 import FeaturesSection from "./sections/FeaturesSection";
 import PaymentsSection from "./sections/PaymentsSection";
 
-import styles from "./styles.module.css";
+import styles from "./index.module.css";
 
 const metrics = [
   { value: "2500+", description: "TV Channels" },

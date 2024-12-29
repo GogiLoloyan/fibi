@@ -164,6 +164,12 @@
   align-items: center;
 }
 
+.leftIcon svg,
+.rightIcon svg {
+  width: 20px;
+  height: 20px;
+}
+
 /* Full width */
 .fullWidth {
   width: 100%;

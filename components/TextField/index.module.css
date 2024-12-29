@@ -1,0 +1,84 @@
+.fieldWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.label {
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  color: var(--color-n700);
+}
+
+.labelDisabled {
+  color: var(--color-n450);
+}
+
+.inputWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  border: 1px solid var(--color-n300);
+  border-radius: 14px;
+  font-size: var(--font-size-base);
+  background-color: var(--color-n100);
+  color: var(--color-n500);
+  transition: all 0.3s ease;
+  will-change: background-color;
+}
+
+/* Sizes */
+.medium {
+  padding: 10px 16px;
+  height: 40px;
+}
+
+.large {
+  padding: 14px 16px;
+  height: 48px;
+}
+
+/* States */
+.input:hover:not(:disabled):not(.error):not(:focus) {
+  border: 1px solid var(--color-n400);
+  background-color: var(--color-n300);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-n800);
+  color: var(--color-n800);
+}
+
+.disabled {
+  background-color: var(--color-n400);
+  border-color: var(--color-n400);
+  color: var(--color-n450);
+  cursor: not-allowed;
+}
+
+.error {
+  border-color: var(--color-r800);
+  background-color: var(--color-r300);
+}
+
+/* .error:focus {
+} */
+
+.errorMessage {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  gap: 6px;
+  color: var(--color-r800);
+  font-size: var(--font-size-sm);
+}
+
+.errorIcon {
+  width: 16px;
+  height: 16px;
+}

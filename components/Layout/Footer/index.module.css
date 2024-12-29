@@ -1,10 +1,119 @@
 .container {
-  gap:  56px;
+  gap: 56px;
   padding: 96px 183px;
   background-color: var(--color-header);
-  
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
   @media (max-width: 768px) {
-    gap:  40px;
+    gap: 40px;
     padding: 40px 20px 72px 20px;
   }
+}
+
+.primaryFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+
+  @media (max-width: 768px) {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
+
+.navigation {
+  flex: 1;
+  display: flex;
+}
+
+.navigationList {
+  flex: 1;
+  list-style: none;
+}
+
+.navigationListItem {
+  margin-bottom: 6px;
+}
+
+.navigationListItem:first-child {
+  margin-bottom: 12px;
+}
+
+.navigationListItem a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.requestCallBlock {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: var(--color-n200) !important;
+}
+
+.requestCallBlock button {
+  width: 40px;
+}
+
+.requestCallForm  {
+  display: flex;
+  gap: 12px;
+}
+
+.divider {
+  height: 1px;
+  background-color: var(--color-n300);
+}
+
+.secondaryFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+
+.logo {
+  height: 48px;
+  width: 76px;
+  color: var(--color-m800);
+
+  @media (max-width: 768px) {
+    height: 40px;
+    width: 64px;
+  }
+}
+
+.copyRight {
+  color: var(--color-n500);
+
+  @media (max-width: 768px) {
+    order: 1;
+  }
+}
+
+.socialIcons {
+  display: flex;
+  gap: 12px;
+  padding: 24px 32px;
+
+  @media (max-width: 768px) {
+    padding: 0;
+  }
+}
+
+.socialButton {
+  width: 40px;
+}
+
+.socialButton svg {
+  width: 20px;
+  height: 20px;
 }
