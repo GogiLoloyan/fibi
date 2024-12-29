@@ -22,7 +22,6 @@
 
 .heroSectionMain {
   display: grid;
-  gap: 64px;
   z-index: 0;
   max-width: max-content;
   height: max-content;
@@ -33,12 +32,12 @@
 }
 
 .heroTitle {
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: 24px;
   pointer-events: all;
 
   @media (max-width: 768px) {
     font-size: 1.875rem;
-    margin-bottom: -32px;
+    margin-bottom: 16px;
   }
 }
 
@@ -47,10 +46,12 @@
   pointer-events: all;
   max-width: 500px;
   width: 100%;
+  margin-bottom: 64px;
 
   @media (max-width: 768px) {
     max-width: 100%;
     font-size: var(--font-size-base);
+    margin-bottom: 48px;
   }
 }
 
