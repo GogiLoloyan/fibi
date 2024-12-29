@@ -3,8 +3,6 @@
 import React from "react";
 import styles from "./index.module.css";
 
-import AlertIcon from "../../public/icons/alert.svg";
-
 export type TextFieldSize = "medium" | "large";
 
 export interface TextFieldProps

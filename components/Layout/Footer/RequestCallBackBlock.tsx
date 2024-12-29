@@ -20,7 +20,7 @@ const RequestCallBackBlock = () => {
         Have a Questions?
       </p>
       <p className={classNames("text-base color-n500")}>
-        Leave your email address, and we'll get in touch to assist you.
+        Leave your email address, and we&apos;ll get in touch to assist you.
       </p>
       <div className={styles.requestCallForm}>
         <TextField
