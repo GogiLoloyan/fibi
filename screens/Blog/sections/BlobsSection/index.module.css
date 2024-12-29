@@ -1,0 +1,45 @@
+/* .section {
+  gap: unset;
+} */
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+
+  overflow: auto;
+  width: 100%;
+}
+
+.search {
+  width: 320px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    order: -1;
+  }
+}
+
+.blogList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+
+  @media (max-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
