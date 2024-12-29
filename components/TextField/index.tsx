@@ -11,7 +11,7 @@ export interface TextFieldProps
       React.InputHTMLAttributes<HTMLInputElement>,
       HTMLInputElement
     >,
-    "size"
+    "size" | "prefix"
   > {
   label?: string;
   value?: string;
@@ -19,6 +19,7 @@ export interface TextFieldProps
   disabled?: boolean;
   error?: string;
   placeholder?: string;
+  prefix?: React.ReactNode;
 }
 
 const TextField: React.FC<TextFieldProps> = ({
@@ -29,11 +30,13 @@ const TextField: React.FC<TextFieldProps> = ({
   disabled = false,
   error,
   placeholder,
+  prefix,
 }) => {
   const inputClasses = [
     styles.input,
     styles[size],
     disabled && styles.disabled,
+    prefix && styles.withPrefix,
     error && styles.error,
   ]
     .filter(Boolean)
@@ -47,6 +50,7 @@ const TextField: React.FC<TextFieldProps> = ({
     <div className={styles.fieldWrapper}>
       {label && <label className={labelClasses}>{label}</label>}
       <div className={styles.inputWrapper}>
+        {prefix && <div className={styles.prefix}>{prefix}</div>}
         <input
           type="text"
           className={inputClasses}

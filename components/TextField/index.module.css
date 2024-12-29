@@ -31,6 +31,23 @@
   will-change: background-color;
 }
 
+.withPrefix {
+  padding-left: 42px !important;
+}
+
+.prefix {
+  position: absolute;
+  left: 16px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.prefix svg {
+  width: 20px;
+  height: 20px;
+}
+
 /* Sizes */
 .medium {
   padding: 10px 16px;
