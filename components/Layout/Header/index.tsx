@@ -1,5 +1,7 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 import Logo from "../../../assets/images/logo.svg";
 import LogoMobile from "../../../assets/images/logo-mobile.svg";
@@ -10,12 +12,13 @@ import HamburgerIcon from "../../../public/icons/hamburger.svg";
 import CloseMenuIcon from "../../../public/icons/close-menu.svg";
 
 import Menu from "./Menu";
-import styles from "./index.module.css";
 import MobileMenu from "./MobileMenu";
 import ThemeToggleButton from "./ThemeToggleButton";
-import Link from "next/link";
+
+import styles from "./index.module.css";
 
 const Header: React.FC = () => {
+  const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -28,7 +31,9 @@ const Header: React.FC = () => {
         <Menu />
         <div className={styles.actions}>
           <ThemeToggleButton />
-          <Button size="medium">Book a Demo</Button>
+          <Button size="medium" onClick={() => router.push("/book-a-demo")}>
+            Book a Demo
+          </Button>
           <div
             className={styles.menuButton}
             tabIndex={0}

@@ -18,8 +18,8 @@
 }
 
 /* Gradient glow effect base */
-.button.primaryFill::before,
-.button.inverseFill::before {
+.button.primaryFill:not(.disabled)::before,
+.button.inverseFill:not(.disabled)::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -39,14 +39,14 @@
 }
 
 /* Hover state - lighter glow */
-.button.primaryFill:hover::before,
-.button.inverseFill:hover:before {
+.button.primaryFill:not(.disabled):hover::before,
+.button.inverseFill:not(.disabled):hover:before {
   opacity: 1;
 }
 
 /* Active/Pressed state - stronger glow */
-.button.primaryFill:active::before,
-.button.inverseFill:active:before {
+.button.primaryFill:not(.disabled):active::before,
+.button.inverseFill:not(.disabled):active:before {
   opacity: 1;
   background: radial-gradient(
     110% 110% at 50% 100%,
@@ -62,10 +62,10 @@
   background-color: var(--color-n800);
 }
 
-.primaryFill:hover {
+.primaryFill:not(.disabled):hover {
 }
 
-.primaryFill:active {
+.primaryFill:not(.disabled):active {
 }
 
 /* primaryOutline */
@@ -74,11 +74,11 @@
   background-color: transparent;
 }
 
-.primaryOutline:hover {
+.primaryOutline:not(.disabled):hover {
   background-color: var(--color-m400);
 }
 
-.primaryOutline:active {
+.primaryOutline:not(.disabled):active {
   background-color: var(--color-m450);
 }
 
@@ -87,11 +87,11 @@
   background-color: transparent;
 }
 
-.primaryText:hover {
+.primaryText:not(.disabled):hover {
   background-color: var(--color-m300);
 }
 
-.primaryText:active {
+.primaryText:not(.disabled):active {
   background-color: var(--color-m400);
 }
 
@@ -101,11 +101,11 @@
   color: var(--color-n800);
 }
 
-.secondaryFill:hover {
+.secondaryFill:not(.disabled):hover {
   background-color: var(--color-n400);
 }
 
-.secondaryFill:active {
+.secondaryFill:not(.disabled):active {
   background-color: var(--color-n450);
 }
 
@@ -114,11 +114,11 @@
   background-color: var(--color-n800);
 }
 
-.inverseFill:hover {
+.inverseFill:not(.disabled):hover {
   background-color: var(--color-n100);
 }
 
-.inverseFill:active {
+.inverseFill:not(.disabled):active {
 }
 
 /* Sizes */
@@ -176,12 +176,12 @@
 }
 
 /* Focus state with double border */
-.button:focus-visible {
+.button:not(.disabled):focus-visible {
   outline: none;
 }
 
-.button:focus-visible::before,
-.button:focus-visible::after {
+.button:not(.disabled):focus-visible::before,
+.button:not(.disabled):focus-visible::after {
   content: "";
   position: absolute;
   border-radius: inherit;
@@ -189,33 +189,33 @@
 }
 
 /* Inner white border */
-.button:focus-visible::before {
+.button:not(.disabled):focus-visible::before {
   inset: -1px;
   border: 1px solid white;
 }
 
 /* Outer pink border */
-.button:focus-visible::after {
+.button:not(.disabled):focus-visible::after {
   inset: -2px;
   border: 1px solid var(--color-m800);
 }
 
 /* Firefox and other browsers fallback */
 @supports not selector(:focus-visible) {
-  .button:focus::before,
-  .button:focus::after {
+  .button:not(.disabled):focus::before,
+  .button:not(.disabled):focus::after {
     content: "";
     position: absolute;
     border-radius: inherit;
     pointer-events: none;
   }
 
-  .button:focus::before {
+  .button:not(.disabled):focus::before {
     inset: -1px;
     border: 1px solid white;
   }
 
-  .button:focus::after {
+  .button:not(.disabled):focus::after {
     inset: -2px;
     border: 1px solid var(--color-n800);
   }

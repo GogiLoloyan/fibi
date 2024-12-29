@@ -1,0 +1,26 @@
+.copyButton {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: none;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.copyButton:hover:not(.copied) {
+  background-color: var(--color-n400);
+}
+
+.copyButton:active:not(.copied) {
+  background-color: var(--color-n450);
+}
+
+.copyButton svg {
+  width: 20px;
+  height: 20px;
+  color: var(--color-n800);
+}

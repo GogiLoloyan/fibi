@@ -27,8 +27,14 @@
   font-size: var(--font-size-base);
   background-color: var(--color-n100);
   color: var(--color-n500);
-  transition: all 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease, border 0.3s ease;
   will-change: background-color;
+}
+
+.input.textarea {
+  width: 100%;
+  height: 110px;
+  resize: vertical;
 }
 
 .withPrefix {
@@ -46,6 +52,7 @@
 .prefix svg {
   width: 20px;
   height: 20px;
+  color: var(--color-n500);
 }
 
 /* Sizes */

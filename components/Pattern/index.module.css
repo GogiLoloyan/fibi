@@ -1,6 +1,6 @@
 .bgPatternContainer {
   position: absolute;
-  height:var(--pattern-height);
+  height: var(--pattern-height);
   width: 100%;
   z-index: 0;
   overflow: hidden;
@@ -11,6 +11,10 @@
   top: 0;
   right: 0;
   height: 700px;
+  color: var(--color-n350);
+  /* issue with */
+  /* transition: color 0.3s ease; */
+  transition: fill 0s;
 
   @media (max-width: 768px) {
     height: auto;
@@ -35,6 +39,8 @@
       transparent 20%,
       var(--color-n200) 90%
     );
+  /* issue with */
+  /* transition: all 0.3s ease; */
 
   @media (max-width: 768px) {
     background: radial-gradient(
@@ -51,9 +57,9 @@
 }
 
 .bgPattern > g > path {
-  transition: fill 0.3s ease;
-  fill: var(--color-n350);
+  fill: currentColor;
   will-change: fill;
+  transition: fill 0s;
 }
 
 .bgPattern > g > path:hover {

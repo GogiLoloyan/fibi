@@ -11,8 +11,13 @@ export interface TextFieldProps
       React.InputHTMLAttributes<HTMLInputElement>,
       HTMLInputElement
     >,
-    "size" | "prefix"
+    "size" | "prefix" | "onChange"
   > {
+  onChange?: (
+    event:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLTextAreaElement>
+  ) => void;
   label?: string;
   value?: string;
   size?: TextFieldSize;
@@ -20,6 +25,7 @@ export interface TextFieldProps
   error?: string;
   placeholder?: string;
   prefix?: React.ReactNode;
+  inputTag?: "input" | "textarea";
 }
 
 const TextField: React.FC<TextFieldProps> = ({
@@ -31,6 +37,7 @@ const TextField: React.FC<TextFieldProps> = ({
   error,
   placeholder,
   prefix,
+  inputTag = "input",
 }) => {
   const inputClasses = [
     styles.input,
@@ -38,6 +45,7 @@ const TextField: React.FC<TextFieldProps> = ({
     disabled && styles.disabled,
     prefix && styles.withPrefix,
     error && styles.error,
+    inputTag === "textarea" && styles.textarea,
   ]
     .filter(Boolean)
     .join(" ");
@@ -46,12 +54,14 @@ const TextField: React.FC<TextFieldProps> = ({
     .filter(Boolean)
     .join(" ");
 
+  const Tag = inputTag;
+
   return (
     <div className={styles.fieldWrapper}>
       {label && <label className={labelClasses}>{label}</label>}
       <div className={styles.inputWrapper}>
         {prefix && <div className={styles.prefix}>{prefix}</div>}
-        <input
+        <Tag
           type="text"
           className={inputClasses}
           value={value}

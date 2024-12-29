@@ -41,7 +41,7 @@ export const Button: React.FC<ButtonProps> = ({
     .join(" ");
 
   return (
-    <button {...props} className={buttonClasses}>
+    <button {...props} disabled={disabled} className={buttonClasses}>
       {leftIcon && <span className={styles.leftIcon}>{leftIcon}</span>}
       {children && <span className={styles.text}>{children}</span>}
       {rightIcon && <span className={styles.rightIcon}>{rightIcon}</span>}

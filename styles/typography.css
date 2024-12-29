@@ -44,29 +44,74 @@
 .text-xs {
   font-size: var(--font-size-xs);
 }
+.mobile--text-xs {
+  @media (max-width: 768px) {
+    font-size: var(--font-size-xs);
+  }
+}
 .text-sm {
   font-size: var(--font-size-sm);
+}
+.mobile--text-sm {
+  @media (max-width: 768px) {
+    ont-size: var(--font-size-sm);
+  }
 }
 .text-base {
   font-size: var(--font-size-base);
 }
+.mobile--text-base {
+  @media (max-width: 768px) {
+    font-size: var(--font-size-base);
+  }
+}
 .text-lg {
   font-size: var(--font-size-lg);
+}
+.mobile--text-lg {
+  @media (max-width: 768px) {
+    font-size: var(--font-size-lg);
+  }
 }
 .text-xl {
   font-size: var(--font-size-xl);
 }
+.mobile--text-xl {
+  @media (max-width: 768px) {
+    font-size: var(--font-size-xl);
+  }
+}
 .text-2xl {
   font-size: var(--font-size-2xl);
+}
+.mobile--text-2xl {
+  @media (max-width: 768px) {
+    font-size: var(--font-size-2xl);
+  }
 }
 .text-3xl {
   font-size: var(--font-size-3xl);
 }
+.mobile--text-3xl {
+  @media (max-width: 768px) {
+    font-size: var(--font-size-3xl);
+  }
+}
 .text-4xl {
   font-size: var(--font-size-4xl);
 }
+.mobile--text-4xl {
+  @media (max-width: 768px) {
+    font-size: var(--font-size-4xl);
+  }
+}
 .text-5xl {
   font-size: var(--font-size-5xl);
+}
+.mobile--text-5xl {
+  @media (max-width: 768px) {
+    font-size: var(--font-size-5xl);
+  }
 }
 
 /* Font Weights */
@@ -180,4 +225,16 @@
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-normal);
   line-height: var(--line-height-normal);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label,
+svg {
+  transition: color 0.3s ease;
 }

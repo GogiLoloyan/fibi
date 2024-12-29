@@ -32,6 +32,8 @@ const Menu: React.FC = () => {
           transform: `translateX(${rect.left - parentRect.left}px)`,
         });
       }
+    } else {
+      setUnderlineStyle({});
     }
   }, [activeItem]);
 
@@ -39,6 +41,8 @@ const Menu: React.FC = () => {
     const menuItem = menuItems.find((item) => item.path === pathname);
     if (menuItem) {
       setActiveItem(menuItem.path);
+    } else {
+      setActiveItem(pathname);
     }
   }, [pathname]);
 

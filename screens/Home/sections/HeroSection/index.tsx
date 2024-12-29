@@ -1,7 +1,8 @@
 import Button from "../../../../components/Button";
 import Section from "../../../../components/Section";
+import Partners from "../../../../components/Partners";
 
-import Partners from "./Partners";
+import BookDemoButton from "./BookDemoButton";
 
 import styles from "./index.module.css";
 
@@ -19,10 +20,10 @@ const HeroSection = () => {
         <p className={`${styles.heroSubTitle} color-n500`}>
           No coding, no IT teams, no profit sharing
           <br />
-          {'-just a Fibis All-in-One Platform.'}
+          {"-just a Fibis All-in-One Platform."}
         </p>
         <div className={styles.heroActions}>
-          <Button>Book a Demo</Button>
+          <BookDemoButton />
           <Button variant="secondaryFill">Talk to Sales</Button>
         </div>
       </div>
