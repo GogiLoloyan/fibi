@@ -25,10 +25,6 @@
   z-index: 0;
   max-width: max-content;
   height: max-content;
-
-  @media (max-width: 768px) {
-    gap: 48px;
-  }
 }
 
 .heroTitle {
