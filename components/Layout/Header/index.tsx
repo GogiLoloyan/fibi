@@ -2,16 +2,17 @@
 import { useState } from "react";
 
 import Logo from "../../../assets/images/logo.svg";
-import Button from "../../../components/Button";
-import { toggleTheme } from "../../../styles/theme/utils";
+import LogoMobile from "../../../assets/images/logo-mobile.svg";
 
-import MoonIcon from "../../../public/icons/moon.svg";
+import Button from "../../../components/Button";
+
 import HamburgerIcon from "../../../public/icons/hamburger.svg";
 import CloseMenuIcon from "../../../public/icons/close-menu.svg";
 
 import Menu from "./Menu";
 import styles from "./index.module.css";
 import MobileMenu from "./MobileMenu";
+import ThemeToggleButton from "./ThemeToggleButton";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,15 +21,10 @@ const Header: React.FC = () => {
     <>
       <header className={styles.container}>
         <Logo className={styles.logo} width={64} height={40} />
+        <LogoMobile className={styles.logoMobile} width={27} height={40} />
         <Menu />
         <div className={styles.actions}>
-          <Button
-            variant="secondaryFill"
-            size="medium"
-            onClick={() => toggleTheme()}
-            leftIcon={<MoonIcon />}
-            className={styles.themeButton}
-          />
+          <ThemeToggleButton />
           <Button size="medium">Book a Demo</Button>
           <div
             className={styles.menuButton}

@@ -8,10 +8,11 @@
 
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  border-bottom-color: var(--color-n300);;
+  border-bottom-color: var(--color-n300);
 
   @media (max-width: 768px) {
-    padding-inline: var(--spacing-sm);
+    padding-inline: 24px 16px;
+    justify-content: space-between;
   }
 }
 
@@ -20,13 +21,23 @@
   min-width: 64px;
 
   @media (max-width: 768px) {
-    flex: 1;
+    display: none;
   }
 }
 
-.logo > path {
+.logoMobile {
+  display: none;
+  margin-bottom: var(--spacing-sm);
+
+  @media (max-width: 768px) {
+    display: block;
+    min-width: 27px;
+  }
+}
+
+.logo,
+.logoMobile {
   color: var(--color-n800);
-  fill: currentColor;
 }
 
 .navigation {
@@ -49,6 +60,7 @@
 .menuButton {
   width: 40px;
   padding: 0 10px !important;
+  color: var(--color-n800);
 }
 
 .themeButton svg,
