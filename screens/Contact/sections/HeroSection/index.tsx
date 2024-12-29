@@ -15,7 +15,7 @@ const HeroSection = () => {
       <div className={styles.innerSection}>
         <div className={styles.heroSectionMain}>
           <h1 className={`${styles.heroTitle} text-4xl font-bold color-n800`}>
-            Let’s Build Together
+            Let's Build Together
           </h1>
           <p className={`${styles.heroSubTitle} color-n500`}>
             Have questions or ready to start? Reach out to our team for expert
