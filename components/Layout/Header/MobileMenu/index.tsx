@@ -1,6 +1,6 @@
 import Link from "next/link";
 import classNames from "classnames";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 import TwitterIcon from "../../../../public/icons/twitter.svg";
 import InstagramIcon from "../../../../public/icons/instagram.svg";
@@ -14,12 +14,10 @@ const MobileMenu: React.FC<{ onClose: () => void; open: boolean }> = ({
   onClose,
   open,
 }) => {
-  const router = useRouter();
   const pathname = usePathname();
 
-  const handleNavClick = (path: string) => {
+  const handleNavClick = () => {
     onClose();
-    router.push(path);
   };
 
   if (!open) return null;
@@ -39,7 +37,7 @@ const MobileMenu: React.FC<{ onClose: () => void; open: boolean }> = ({
             >
               <Link
                 href={item.path}
-                onClick={() => handleNavClick(item.path)}
+                onClick={handleNavClick}
                 className={classNames(
                   styles.navItem,
                   "text-base leading-normal color-n500",

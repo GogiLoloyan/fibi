@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 import styles from "./index.module.css";
 
@@ -14,7 +14,6 @@ interface UnderlineStyle {
 }
 
 const Menu: React.FC = () => {
-  const router = useRouter();
   const pathname = usePathname();
 
   const [activeItem, setActiveItem] = useState<string>(menuItems[0].path);
@@ -57,10 +56,6 @@ const Menu: React.FC = () => {
     }
   };
 
-  const handleNavClick = (path: string) => {
-    router.push(path);
-  };
-
   return (
     <nav className={styles.navMenu}>
       {menuItems.map((item) => (
@@ -68,7 +63,6 @@ const Menu: React.FC = () => {
           key={item.path}
           ref={(el) => setRef(el, item.path)}
           href={item.path}
-          onClick={() => handleNavClick(item.path)}
           className={`${styles.navItem} text-base leading-normal ${
             pathname === item.path ? `${styles.navItemActive} font-bold` : ""
           } `}
