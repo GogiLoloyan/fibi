@@ -19,7 +19,7 @@ const HeroSection = () => {
         <p className={`${styles.heroSubTitle} color-n500`}>
           No coding, no IT teams, no profit sharing
           <br />
-          {'—just a Fibis All-in-One Platform.'}
+          {'-just a Fibis All-in-One Platform.'}
         </p>
         <div className={styles.heroActions}>
           <Button>Book a Demo</Button>

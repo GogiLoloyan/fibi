@@ -32,7 +32,7 @@ export const features: Array<{ items: Feature[] }> = [
       {
         icon: "play",
         title: "All-In-One OTT",
-        subtitle: "Manage your streaming service – in one place.",
+        subtitle: "Manage your streaming service - in one place.",
       },
       {
         icon: "category",
@@ -53,7 +53,7 @@ export const features: Array<{ items: Feature[] }> = [
         icon: "setting",
         title: "Seamless Integrations",
         subtitle:
-          "Integrate with popular third-party tools through powerful API integrations․",
+          "Integrate with popular third-party tools through powerful API integrations.",
       },
     ],
   },

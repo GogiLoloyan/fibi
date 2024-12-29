@@ -42,7 +42,7 @@ const FeaturesSection = () => {
             Want to See Fibi in Action?
           </p>
           <p className={classNames(styles.bannerSubtitle, "text-base")}>
-            See Fibi in action—book a demo and unlock your streaming business
+            See Fibi in action-book a demo and unlock your streaming business
             potential.
           </p>
         </div>

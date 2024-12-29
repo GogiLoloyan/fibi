@@ -37,6 +37,26 @@ const Card: React.FC<CardProps> = ({
     date.getMonth() + 1
   ).padStart(2, "0")}.${date.getFullYear()}`;
 
+  const divider = (
+    <svg
+      width="4"
+      height="4"
+      viewBox="0 0 4 4"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={styles.separator}
+    >
+      <rect
+        x="0.25"
+        y="0.5"
+        width="3"
+        height="3"
+        rx="1.5"
+        fill="currentColor"
+      />
+    </svg>
+  );
+
   return (
     <div className={cardClasses}>
       <div className={styles.imageWrapper}>
@@ -56,9 +76,9 @@ const Card: React.FC<CardProps> = ({
         </p>
         <div className={styles.meta}>
           <span>{formattedDate}</span>
-          <span className={styles.separator}>•</span>
+          {divider}
           <span>{readTime} read</span>
-          <span className={styles.separator}>•</span>
+          {divider}
           <span>{formatViews(views)} views</span>
         </div>
       </div>
