@@ -1,0 +1,59 @@
+.tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-n400);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  color: var(--color-n800);
+  height: 40px;
+  padding: 10px 24px;
+  border-radius: 12px;
+  font-size: var(--font-size-sm);
+  background-color: transparent;
+}
+
+.tab:hover:not(.selected) {
+  border-color: var(--color-n400);
+  background-color: var(--color-n400);
+}
+
+.tab:active:not(.selected) {
+  color: var(--color-n800);
+  border-color: var(--color-n300);
+  background-color: var(--color-n300);
+}
+
+.text {
+  white-space: nowrap;
+  font-weight: var(--font-weight-semibold);
+}
+
+/* States */
+.selected {
+  background-color: var(--color-n800);
+  color: var(--color-n100);
+}
+
+.disabled {
+  cursor: not-allowed;
+  border: 1px solid var(--color-n400);
+
+  color: var(--color-n450);
+}
+
+.tag svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Focus state with double border */
+.tag:focus-visible {
+  outline: none;
+}
+
+/* Loading state (optional) */
+/* .loading {
+} */
