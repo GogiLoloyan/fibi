@@ -1,0 +1,83 @@
+.heroSection {
+  gap: 72px;
+  pointer-events: none;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 48px;
+  }
+}
+
+.innerSection {
+  display: flex;
+  justify-content: space-between;
+  padding: 108px 0 0 0;
+  gap: 32px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+.heroSectionMain {
+  display: grid;
+  z-index: 0;
+  max-width: max-content;
+  height: max-content;
+}
+
+.heroTitle {
+  margin-bottom: 24px;
+  pointer-events: all;
+
+  @media (max-width: 768px) {
+    font-size: 1.875rem;
+    margin-bottom: 16px;
+  }
+}
+
+.heroSubTitle {
+  font-size: 1.25rem;
+  pointer-events: all;
+  max-width: 500px;
+  width: 100%;
+  margin-bottom: 64px;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    font-size: var(--font-size-base);
+    margin-bottom: 48px;
+  }
+}
+
+.contactInfoBlock {
+  width: max-content;
+  padding: 20px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  pointer-events: all;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.contactInfo {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.contactInfo > svg {
+  width: 32px;
+  height: 32px;
+  color: var(--color-n800);
+}
+
+.contactInfoTextMain {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}

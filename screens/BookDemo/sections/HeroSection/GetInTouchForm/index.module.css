@@ -1,0 +1,10 @@
+.container {
+  width: 100%;
+  max-width: 480px;
+  pointer-events: all;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 100%;
+  }
+}

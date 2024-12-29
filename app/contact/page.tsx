@@ -1,3 +1,5 @@
+import Contact from "../../screens/Contact";
+
 export default function Page() {
-  return <div>solutions</div>;
+  return <Contact />;
 }
