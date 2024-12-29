@@ -1,5 +1,7 @@
 "use client";
 
+import { useRouter } from "next/navigation";
+
 import Card from "../../../../components/Card";
 import Button from "../../../../components/Button";
 import Section from "../../../../components/Section";
@@ -12,6 +14,7 @@ import styles from "./index.module.css";
 
 const BlogSection = () => {
   const isMobile = useIsMobile();
+  const router = useRouter()
 
   return (
     <Section
@@ -22,6 +25,7 @@ const BlogSection = () => {
           variant="primaryText"
           size="small"
           rightIcon={<ArrowIcon />}
+          onClick={() => router.push("/blog")}
         >
           View All
         </Button>
