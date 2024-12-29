@@ -24,6 +24,11 @@
   margin-bottom: 12px;
 }
 
+.featureIcon svg {
+  width: 32px;
+  height: 32px;
+}
+
 .featureTitle {
   font-size: 1.375rem;
   font-weight: 700;

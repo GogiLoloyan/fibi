@@ -1,44 +1,19 @@
 import classNames from "classnames";
 
+import Icon from "../../../../components/Icon";
 import Block from "../../../../components/Block";
 import Section from "../../../../components/Section";
 
 import BrandIcon from "../../../../public/icons/brand.svg";
 
-import CRMIcon from "../../../../public/icons/crm.svg";
-import PieChartIcon from "../../../../public/icons/pie-chart.svg";
-import SettingIcon from "../../../../public/icons/setting.svg";
-import DesignIcon from "../../../../public/icons/design.svg";
-import MonitorIcon from "../../../../public/icons/monitor-mobile.svg";
-import RefreshIcon from "../../../../public/icons/refresh-square-2.svg";
-import PlayIcon from "../../../../public/icons/play.svg";
-import UserIcon from "../../../../public/icons/user-tag.svg";
-import MoneyIcon from "../../../../public/icons/money.svg";
+import { solutions } from "../../../../data/solutions";
 
 import styles from "./index.module.css";
-
-import { solutions, type SolutionIcon } from "../../../../data/solutions";
-
-const iconsMap: Record<
-  SolutionIcon,
-  React.FC<React.SVGAttributes<SVGAElement>>
-> = {
-  crm: CRMIcon,
-  "pie-chart": PieChartIcon,
-  setting: SettingIcon,
-  design: DesignIcon,
-  monitor: MonitorIcon,
-  refresh: RefreshIcon,
-  play: PlayIcon,
-  money: MoneyIcon,
-  user: UserIcon,
-};
 
 const SolutionsSection = () => {
   return (
     <Section>
       {solutions.map((solution) => {
-        const Icon = iconsMap[solution.icon];
         return (
           <Block
             key={solution.title}
@@ -46,7 +21,7 @@ const SolutionsSection = () => {
             style={{ "--theme-color": `var(--${solution.themeColor})` }}
           >
             <div className={styles.title}>
-              <Icon className={styles.icon} />
+              <Icon name={solution.icon} className={styles.icon} />
               <h3 className="text-2xl font-bold color-n800">
                 {solution.title}
               </h3>

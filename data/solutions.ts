@@ -1,3 +1,5 @@
+import { type IconKeys } from "../components/Icon";
+
 export const heroData = {
   title: "All-in-One Business Solutions",
   subTitle: `A Fully Integrated SaaS Platform That Simplifies<br />Content Streaming-From Creation to<br />Monetization-With Scalable, Cost-Effective<br />Solutions For Exceptional User Experiences.`,
@@ -10,19 +12,8 @@ export const metrics = [
   { value: "~20%", description: "User Growth" },
 ];
 
-export type SolutionIcon =
-  | "crm"
-  | "pie-chart"
-  | "setting"
-  | "design"
-  | "monitor"
-  | "refresh"
-  | "play"
-  | "money"
-  | "user";
-
 type Solution = {
-  icon: SolutionIcon;
+  icon: IconKeys;
   title: string;
   description?: string;
   themeColor: string;
