@@ -1,5 +1,6 @@
 .heroSection {
   gap: unset;
+  pointer-events: none;
 }
 
 .heroSectionMain {
@@ -15,6 +16,7 @@
 
 .heroTitle {
   margin-bottom: var(--spacing-lg);
+  pointer-events: all;
 
   @media (max-width: 768px) {
     font-size: 1.875rem;
@@ -24,6 +26,7 @@
 
 .heroSubTitle {
   font-size: 1.25rem;
+  pointer-events: all;
 
   @media (max-width: 768px) {
     font-size: var(--font-size-base);

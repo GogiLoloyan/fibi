@@ -7,12 +7,13 @@ const HeroSection = () => {
     <Section className={styles.heroSection}>
       <div className={styles.heroSectionMain}>
         <h1 className={`${styles.heroTitle} text-4xl font-bold color-n800`}>
-          Insights, Trends, and More
+          Check out fibi blog!
         </h1>
         <p className={`${styles.heroSubTitle} color-n500`}>
-          Your one-stop destination for industry news,
-          <br /> expert tips, and fun, engaging content about
-          <br /> streaming and OTT.
+          Check out our blog for cool insights,
+          <br /> the latest news, fun articles, and
+          <br />
+          interesting podcasts just for you!
         </p>
       </div>
     </Section>
