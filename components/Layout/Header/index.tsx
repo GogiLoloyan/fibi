@@ -13,6 +13,7 @@ import Menu from "./Menu";
 import styles from "./index.module.css";
 import MobileMenu from "./MobileMenu";
 import ThemeToggleButton from "./ThemeToggleButton";
+import Link from "next/link";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,8 +21,10 @@ const Header: React.FC = () => {
   return (
     <>
       <header className={styles.container}>
-        <Logo className={styles.logo} width={64} height={40} />
-        <LogoMobile className={styles.logoMobile} width={27} height={40} />
+        <Link href="/">
+          <Logo className={styles.logo} width={64} height={40} />
+          <LogoMobile className={styles.logoMobile} width={27} height={40} />
+        </Link>
         <Menu />
         <div className={styles.actions}>
           <ThemeToggleButton />
