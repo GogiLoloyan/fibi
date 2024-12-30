@@ -7,6 +7,7 @@ import FeaturesSection from "./sections/FeaturesSection";
 import PaymentsSection from "./sections/PaymentsSection";
 
 import styles from "./index.module.css";
+import SolutionsSliderSection from "./sections/SolutionsSliderSection";
 
 const metrics = [
   { value: "2500+", description: "TV Channels" },
@@ -20,6 +21,7 @@ const Home = () => {
     <div className={styles.page}>
       <Pattern />
       <HeroSection />
+      <SolutionsSliderSection />
       <MetricsSection metrics={metrics} />
       <FeaturesSection />
       <PaymentsSection />

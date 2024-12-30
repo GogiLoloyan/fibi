@@ -46,7 +46,7 @@
 }
 .mobile--text-xs {
   @media (max-width: 768px) {
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-xs) !important;
   }
 }
 .text-sm {
@@ -54,7 +54,7 @@
 }
 .mobile--text-sm {
   @media (max-width: 768px) {
-    ont-size: var(--font-size-sm);
+    font-size: var(--font-size-sm) !important;
   }
 }
 .text-base {
@@ -62,7 +62,7 @@
 }
 .mobile--text-base {
   @media (max-width: 768px) {
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-base) !important;
   }
 }
 .text-lg {
@@ -70,7 +70,7 @@
 }
 .mobile--text-lg {
   @media (max-width: 768px) {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-lg) !important;
   }
 }
 .text-xl {
@@ -78,7 +78,7 @@
 }
 .mobile--text-xl {
   @media (max-width: 768px) {
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-xl) !important;
   }
 }
 .text-2xl {
@@ -86,7 +86,7 @@
 }
 .mobile--text-2xl {
   @media (max-width: 768px) {
-    font-size: var(--font-size-2xl);
+    font-size: var(--font-size-2xl) !important;
   }
 }
 .text-3xl {
@@ -94,7 +94,7 @@
 }
 .mobile--text-3xl {
   @media (max-width: 768px) {
-    font-size: var(--font-size-3xl);
+    font-size: var(--font-size-3xl) !important;
   }
 }
 .text-4xl {
@@ -102,7 +102,7 @@
 }
 .mobile--text-4xl {
   @media (max-width: 768px) {
-    font-size: var(--font-size-4xl);
+    font-size: var(--font-size-4xl) !important;
   }
 }
 .text-5xl {
@@ -110,7 +110,7 @@
 }
 .mobile--text-5xl {
   @media (max-width: 768px) {
-    font-size: var(--font-size-5xl);
+    font-size: var(--font-size-5xl) !important;
   }
 }
 
