@@ -22,7 +22,7 @@ const Section: React.FC<SectionProps> = ({
         <div className={styles.header}>
           {title && (
             <h2
-              className={`${styles.sectionTitle} text-4xl font-bold leading-normal`}
+              className={`${styles.sectionTitle} text-4xl mobile--text-24 font-bold leading-normal color-n800`}
             >
               {title}
             </h2>

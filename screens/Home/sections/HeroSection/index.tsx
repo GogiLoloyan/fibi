@@ -14,13 +14,13 @@ const HeroSection = () => {
       <div className={styles.heroSectionMain}>
         <BrandMiniIcon className={styles.brandIcon} />
         <h1
-          className={`${styles.heroTitle} leading-snug color-n700 font-medium`}
+          className={`${styles.heroTitle} leading-snug text-5xl mobile--text-30 color-n700 font-medium`}
         >
           <b className="font-bold">Integrated</b> Systems,
           <br /> Simplified{" "}
           <b className={`${styles.gradientTitle} font-bold`}>Solutions.</b>
         </h1>
-        <p className={`${styles.heroSubTitle} color-n500`}>
+        <p className={`${styles.heroSubTitle} text-22 mobile--text-base color-n500`}>
           No coding, no IT teams, no profit sharing
           <br />
           {"-just a Fibis All-in-One Platform."}

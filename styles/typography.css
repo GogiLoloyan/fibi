@@ -114,12 +114,30 @@
   }
 }
 
+.text-22 {
+  font-size: 1.375rem;
+}
+.mobile--text-2 {
+  @media (max-width: 768px) {
+    font-size: 1.375rem !important;
+  }
+}
+
 .text-24 {
   font-size: 1.5rem;
 }
 .mobile--text-24 {
   @media (max-width: 768px) {
     font-size: 1.5rem !important;
+  }
+}
+
+.text-30 {
+  font-size: 1.875rem;
+}
+.mobile--text-30 {
+  @media (max-width: 768px) {
+    font-size: 1.875rem !important;
   }
 }
 

@@ -18,11 +18,6 @@
 
 .sectionTitle {
   text-align: left;
-  color: var(--color-n800);
-
-  @media (max-width: 768px) {
-    font-size: 1.5rem;
-  }
 }
 
 .actionElement {

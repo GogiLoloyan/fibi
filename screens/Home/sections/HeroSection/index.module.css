@@ -29,23 +29,16 @@
 .heroTitle {
   margin-bottom: 32px;
   pointer-events: all;
-  font-size: var(--font-size-5xl);
 
   @media (max-width: 768px) {
-    font-size: 1.875rem;
     margin-bottom: 16px;
   }
 }
 
 .heroSubTitle {
-  font-size: 1.375rem;
   padding-bottom: 48px;
   width: max-content;
   pointer-events: all;
-
-  @media (max-width: 768px) {
-    font-size: var(--font-size-base);
-  }
 }
 
 .gradientTitle {
