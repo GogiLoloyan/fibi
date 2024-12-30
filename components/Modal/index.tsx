@@ -1,6 +1,6 @@
 "use  client";
 
-import React, { useEffect, useMemo } from "react";
+import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import styles from "./index.module.css";
 
@@ -11,8 +11,12 @@ interface ModalProps {
 }
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
-  const modalRoot = useMemo(() => {
-    return document.getElementById("modal-root");
+  const [modalRoot, setModalRoot] = useState<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setModalRoot(document.getElementById("modal-root") as HTMLDivElement);
+    }
   }, []);
 
   useEffect(() => {
