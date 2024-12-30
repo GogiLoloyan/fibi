@@ -59,6 +59,7 @@ export default async function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <div id="modal-root" /> {/* Modal root */}
       </body>
     </html>
   );
