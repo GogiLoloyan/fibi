@@ -3,6 +3,10 @@
   cursor: pointer;
 }
 
+.linkWrapper {
+  display: contents;
+}
+
 .card:hover .image {
   transform: scale(1.1);
 }

@@ -1,10 +1,12 @@
 import React from "react";
+import Link from "next/link";
 import classNames from "classnames";
 
 import ImageWithErrorHandler from "../ImageWithErrorHandler";
 import styles from "./index.module.css";
 
 export interface CardProps {
+  href?: string;
   variant: "vertical" | "horizontal";
   title: string;
   description: string;
@@ -16,6 +18,7 @@ export interface CardProps {
 }
 
 const Card: React.FC<CardProps> = ({
+  href,
   variant,
   title,
   description,
@@ -57,7 +60,7 @@ const Card: React.FC<CardProps> = ({
     </svg>
   );
 
-  return (
+  const cardContent = (
     <div className={cardClasses}>
       <div className={styles.imageWrapper}>
         <ImageWithErrorHandler
@@ -83,6 +86,16 @@ const Card: React.FC<CardProps> = ({
         </div>
       </div>
     </div>
+  );
+
+  if (!href) {
+    return cardContent;
+  }
+
+  return (
+    <Link href={href} className={styles.linkWrapper}>
+      {cardContent}
+    </Link>
   );
 };
 
