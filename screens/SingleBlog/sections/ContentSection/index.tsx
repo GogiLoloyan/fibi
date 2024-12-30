@@ -19,7 +19,6 @@ import InstagramIcon from "../../../../public/icons/instagram.svg";
 
 import type { SingleBlogType } from "../..";
 import styles from "./index.module.css";
-import Tab from "../../../../components/Tab";
 import Block from "../../../../components/Block";
 import Banner from "./Banner";
 
@@ -174,20 +173,6 @@ const ContentSection: React.FC<{ data: SingleBlogType }> = ({ data }) => {
           </Block>
           <Banner />
         </div>
-
-        {/* {blogs.map((blog, index) => (
-          <Card
-            key={index}
-            variant={"vertical"}
-            title={blog.title}
-            description={blog.description}
-            imageUrl={blog.imageUrl}
-            readTime={blog.readTime}
-            views={blog.views}
-            isLogo={blog.isLogo}
-            createdDate={blog.createdDate}
-          />
-        ))} */}
       </div>
     </Section>
   );

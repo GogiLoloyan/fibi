@@ -28,7 +28,7 @@ const Banner = () => {
           Want to See Fibi in Action?
         </p>
         <p className={classNames(styles.bannerSubtitle, "text-base")}>
-          See Fibi in action—Book Your Free Demo Today!
+          See Fibi in action-Book Your Free Demo Today!
         </p>
       </div>
       <Button onClick={() => router.push("/book-a-demo")}>Contact Us</Button>
