@@ -1,12 +1,12 @@
 .featureContainer {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xs);
+  gap: 12px;
 }
 
 .featureRow {
   display: flex;
-  gap: var(--spacing-xs);
+  gap: 12px;
 
   @media (max-width: 768px) {
     display: contents;

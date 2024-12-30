@@ -1,7 +1,7 @@
 .container {
   border-radius: 40px;
   background-color: var(--color-n100);
-  padding: var(--spacing-lg);
+  padding: 32px;
   transition: background-color 0.3s ease;
 
   @media (max-width: 768px) {

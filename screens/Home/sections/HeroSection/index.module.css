@@ -10,19 +10,25 @@
   max-width: fit-content;
 }
 
+.brandIcon {
+  width: 40px;
+  height: 40px;
+  color: var(--color-m800);
+}
+
 .heroTitle {
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: 32px;
   pointer-events: all;
 
   @media (max-width: 768px) {
     font-size: 1.875rem;
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: 16px;
   }
 }
 
 .heroSubTitle {
   font-size: 1.375rem;
-  padding-bottom: var(--spacing-xl);
+  padding-bottom: 48px;
   width: max-content;
   pointer-events: all;
 
@@ -40,6 +46,6 @@
 
 .heroActions {
   display: flex;
-  gap: var(--spacing-sm);
+  gap: 16px;
   pointer-events: all;
 }

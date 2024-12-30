@@ -2,6 +2,8 @@ import Button from "../../../../components/Button";
 import Section from "../../../../components/Section";
 import Partners from "../../../../components/Partners";
 
+import BrandMiniIcon from "../../../../public/icons/brand-mini.svg";
+
 import BookDemoButton from "./BookDemoButton";
 
 import styles from "./index.module.css";
@@ -10,6 +12,7 @@ const HeroSection = () => {
   return (
     <Section className={styles.heroSection}>
       <div className={styles.heroSectionMain}>
+        <BrandMiniIcon lassName={styles.brandIcon} />
         <h1
           className={`${styles.heroTitle} text-5xl leading-snug color-n700 font-medium`}
         >

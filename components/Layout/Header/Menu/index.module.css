@@ -2,7 +2,7 @@
   position: relative;
   flex: 1;
   display: flex;
-  gap: var(--spacing-xl);
+  gap: 48px;
 
   @media (max-width: 768px) {
     display: none;

@@ -15,7 +15,7 @@
 }
 
 .heroTitle {
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: 32px;
   pointer-events: all;
 
   @media (max-width: 768px) {

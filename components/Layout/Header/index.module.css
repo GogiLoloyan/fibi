@@ -1,9 +1,9 @@
 .container {
   height: 84px;
-  padding-inline: var(--spacing-3xl);
+  padding-inline: 72px;
   display: flex;
   align-items: flex-end;
-  gap: var(--spacing-xxl);
+  gap: 64px;
   background-color: var(--color-header);
   transition: background-color 0.3s ease;
 
@@ -18,7 +18,7 @@
 }
 
 .logo {
-  margin-bottom: var(--spacing-sm);
+  margin-bottom: 16px;
   min-width: 64px;
 
   @media (max-width: 768px) {
@@ -28,7 +28,7 @@
 
 .logoMobile {
   display: none;
-  margin-bottom: var(--spacing-sm);
+  margin-bottom: 16px;
 
   @media (max-width: 768px) {
     display: block;
@@ -44,13 +44,13 @@
 .navigation {
   flex: 1;
   display: flex;
-  gap: var(--spacing-xl);
+  gap: 48px;
 }
 
 .actions {
   display: flex;
-  gap: var(--spacing-xs);
-  margin-bottom: var(--spacing-sm);
+  gap: 12px;
+  margin-bottom: 16px;
 
   @media (max-width: 768px) {
     gap: 6px;

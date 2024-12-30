@@ -1,12 +1,12 @@
 .block {
   display: flex;
-  padding: var(--spacing-md) 9vw;
+  padding: 24px 9vw;
 
   @media (max-width: 768px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-sm);
-    padding: var(--spacing-md) var(--spacing-lg);
+    gap: 16px;
+    padding: 24px 32px;
   }
 }
 
@@ -16,7 +16,7 @@
   flex-direction: column;
   align-items: center;
   gap: 2px;
-  padding: var(--spacing-md) 0;
+  padding: 24px 0;
   color: var(--color-n800);
 
   @media (max-width: 768px) {
