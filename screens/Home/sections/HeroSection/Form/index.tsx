@@ -7,14 +7,10 @@ import Link from "next/link";
 import Button from "../../../../../components/Button";
 import TextField from "../../../../../components/TextField";
 
-import NoCreditCardIcon from "../../../../../public/icons/no-credit-card.svg";
-
 import styles from "./index.module.css";
 
 const Form: React.FC<{ onClose?: () => void }> = ({ onClose }) => {
-  const [error] = useState<string | null>(
-    " Thank you for reaching out. Our team will get back to you as soon as possible."
-  );
+  const [error] = useState<string | null>(null);
   const [formValues, setFormValues] = useState({
     firstName: "",
     lastName: "",
