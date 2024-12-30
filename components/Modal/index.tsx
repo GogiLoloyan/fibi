@@ -1,6 +1,6 @@
 "use  client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import ReactDOM from "react-dom";
 import styles from "./index.module.css";
 
@@ -11,7 +11,9 @@ interface ModalProps {
 }
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
-  const modalRoot = document.getElementById("modal-root");
+  const modalRoot = useMemo(() => {
+    return document.getElementById("modal-root");
+  }, []);
 
   useEffect(() => {
     if (isOpen) {
