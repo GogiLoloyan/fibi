@@ -45,6 +45,7 @@ const BlobsSection = () => {
         {blogs.map((blog, index) => (
           <Card
             key={index}
+            href={`/blog/${blog.id}`}
             variant={"vertical"}
             title={blog.title}
             description={blog.description}
