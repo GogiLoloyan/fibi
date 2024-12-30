@@ -1,17 +1,18 @@
 .heroSection {
   gap: 72px;
   pointer-events: none;
+  padding-top: 108px;
 
   @media (max-width: 768px) {
     flex-direction: column;
     gap: 48px;
+    padding-top: 48px;
   }
 }
 
 .innerSection {
   display: flex;
   justify-content: space-between;
-  padding: 108px 0 0 0;
   gap: 32px;
 
   @media (max-width: 768px) {
