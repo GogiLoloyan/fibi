@@ -43,6 +43,26 @@
   border-radius: 32px;
   padding: 24px;
   background-color: var(--color-n200);
+  /* transition: background 0.3s ease; */
+}
+
+.feature:hover .featureIcon {
+  color: var(--color-f-white);
+}
+
+.feature:hover {
+  background: var(--theme-gradient);
+}
+
+.feature h3,
+.feature p,
+.feature svg {
+  transition: unset;
+}
+
+.feature:hover h3,
+.feature:hover p {
+  color: var(--color-f-white);
 }
 
 .featureIcon {

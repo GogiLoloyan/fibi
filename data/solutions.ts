@@ -17,6 +17,7 @@ type Solution = {
   title: string;
   description?: string;
   themeColor: string;
+  gradient?: string;
   features: {
     title: string;
     description: string;
@@ -30,6 +31,7 @@ export const solutions: Solution[] = [
     description:
       "Simple content management and seamless video experience delivery.",
     themeColor: "color-m800",
+    gradient: "linear-gradient(135deg, #ED0D92 0%, #B70A71 40%, #870753 100%)",
     features: [
       {
         title: "Content Library",
@@ -59,6 +61,7 @@ export const solutions: Solution[] = [
     description:
       "Transform data into insights with powerful analytics that drive growth.",
     themeColor: "color-g800",
+    gradient: "linear-gradient(135deg, #26A693 0%, #0F4039 100%)",
     features: [
       {
         title: "Real-Time Monitoring",
@@ -83,6 +86,7 @@ export const solutions: Solution[] = [
     description:
       "Fibi's integration solution increase your productivity and optimize processes.",
     themeColor: "color-p800",
+    gradient: "linear-gradient(315deg, #4E256E 0%, #8930CF 100%)",
     features: [
       {
         title: "API Access",
@@ -110,6 +114,7 @@ export const solutions: Solution[] = [
     icon: "design",
     title: "Code-Free Website Builder",
     themeColor: "color-b800",
+    gradient: "linear-gradient(135deg, #0D6AED 0%, #073D87 100%)",
     features: [
       {
         title: "Code-Free Builder",
@@ -132,6 +137,7 @@ export const solutions: Solution[] = [
     title: "TV + Mobile App",
     description: "Deliver an exceptional viewing experience on any device.",
     themeColor: "color-o800",
+    gradient: "linear-gradient(135deg, #F56E00 0%, #F56E00 100%)",
     features: [
       {
         title: "Cross-Platform Access",
@@ -160,6 +166,7 @@ export const solutions: Solution[] = [
     description:
       "Use intelligent automation to simplify and optimize your company's operations.",
     themeColor: "color-g800",
+    gradient: "linear-gradient(135deg, #26A693 0%, #0F4039 100%)",
     features: [
       {
         title: "Visual Workflow Designer",
@@ -184,6 +191,7 @@ export const solutions: Solution[] = [
     description:
       "Stream better, earn more, and reach further with Fibi's tools.",
     themeColor: "color-m800",
+    gradient: "linear-gradient(135deg, #ED0D92 0%, #B70A71 40%, #870753 100%)",
     features: [
       {
         title: "Fibi's Video Player",
@@ -212,6 +220,7 @@ export const solutions: Solution[] = [
     title: "Invoice and Payment Suite",
     description: "Empower your business with flexibility and reliability.",
     themeColor: "color-p800",
+    gradient: "linear-gradient(315deg, #4E256E 0%, #8930CF 100%)",
     features: [
       {
         title: "Flexible Billing Options",
@@ -239,6 +248,7 @@ export const solutions: Solution[] = [
     description:
       "Keep your platform running smoothly with our support and regular updates.",
     themeColor: "color-g800",
+    gradient: "linear-gradient(135deg, #26A693 0%, #0F4039 100%)",
     features: [
       {
         title: "24/7 Technical Support",

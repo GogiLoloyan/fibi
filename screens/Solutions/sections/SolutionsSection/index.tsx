@@ -18,7 +18,10 @@ const SolutionsSection = () => {
           <Block
             key={solution.title}
             className={styles.solution}
-            style={{ "--theme-color": `var(--${solution.themeColor})` }}
+            style={{
+              "--theme-color": `var(--${solution.themeColor})`,
+              "--theme-gradient": solution.gradient,
+            }}
           >
             <div className={styles.title}>
               <Icon name={solution.icon} className={styles.icon} />
