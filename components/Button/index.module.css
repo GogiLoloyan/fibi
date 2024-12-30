@@ -72,6 +72,7 @@
 .primaryOutline {
   border: 1px solid var(--color-n800);
   background-color: transparent;
+  color: var(--color-n800);
 }
 
 .primaryOutline:not(.disabled):hover {

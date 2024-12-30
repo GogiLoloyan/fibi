@@ -114,6 +114,15 @@
   }
 }
 
+.text-24 {
+  font-size: 1.5rem;
+}
+.mobile--text-24 {
+  @media (max-width: 768px) {
+    font-size: 1.5rem !important;
+  }
+}
+
 /* Font Weights */
 .font-thin {
   font-weight: var(--font-weight-thin);

@@ -16,7 +16,11 @@ const Block: React.FC<BlockProps> = ({
 }) => {
   return (
     <div
-      className={classNames(styles.container, className, { compact })}
+      className={classNames(
+        styles.container,
+        className,
+        compact && styles.compact
+      )}
       {...rest}
     >
       {children}

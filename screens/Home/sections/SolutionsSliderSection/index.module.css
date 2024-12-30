@@ -138,10 +138,12 @@
   border-bottom-right-radius: 0;
   background-color: var(--color-f-white);
   align-self: flex-end;
+  box-shadow: 0 3px 4px #11182217;
 }
 
 .content2 .messageBox.messageBoxClient {
   border-bottom-left-radius: 0;
   background-color: #ed0d92;
   margin-right: auto;
+  box-shadow: 0 3px 4px #11182217;
 }
