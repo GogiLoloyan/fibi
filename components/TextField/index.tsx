@@ -32,7 +32,7 @@ const TextField: React.FC<TextFieldProps> = ({
   label,
   value,
   onChange,
-  size = "medium",
+  size,
   disabled = false,
   error,
   placeholder,
@@ -41,7 +41,7 @@ const TextField: React.FC<TextFieldProps> = ({
 }) => {
   const inputClasses = [
     styles.input,
-    styles[size],
+    size && styles[size],
     disabled && styles.disabled,
     prefix && styles.withPrefix,
     error && styles.error,

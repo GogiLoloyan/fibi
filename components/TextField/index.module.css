@@ -29,6 +29,14 @@
   color: var(--color-n500);
   transition: color 0.3s ease, background-color 0.3s ease, border 0.3s ease;
   will-change: background-color;
+
+  padding: 14px 16px;
+  height: 48px;
+
+  @media (max-width: 768px) {
+    padding: 10px 16px;
+    height: 40px;
+  }
 }
 
 .input.textarea {

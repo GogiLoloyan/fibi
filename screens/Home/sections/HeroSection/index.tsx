@@ -1,4 +1,3 @@
-import Button from "../../../../components/Button";
 import Section from "../../../../components/Section";
 import Partners from "../../../../components/Partners";
 
@@ -7,6 +6,7 @@ import BrandMiniIcon from "../../../../public/icons/brand-mini.svg";
 import BookDemoButton from "./BookDemoButton";
 
 import styles from "./index.module.css";
+import TalkToSales from "./TalkToSales";
 
 const HeroSection = () => {
   return (
@@ -27,7 +27,7 @@ const HeroSection = () => {
         </p>
         <div className={styles.heroActions}>
           <BookDemoButton />
-          <Button variant="secondaryFill">Talk to Sales</Button>
+          <TalkToSales />
         </div>
       </div>
       <Partners />
