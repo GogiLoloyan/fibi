@@ -1,8 +1,12 @@
+import classNames from "classnames";
 import styles from "./index.module.css";
 
-const Pattern: React.FC<{ height?: number }> = ({ height = 700 }) => (
+const Pattern: React.FC<{ height?: number; mobileMini?: boolean }> = ({
+  mobileMini,
+  height = 700,
+}) => (
   <div
-    className={styles.bgPatternContainer}
+    className={classNames(styles.bgPatternContainer, mobileMini && styles.bgPatternContainerMobileMini)}
     style={{ "--pattern-height": `${height}px` } as React.CSSProperties}
   >
     <div className={styles.bgPatternGradient} />

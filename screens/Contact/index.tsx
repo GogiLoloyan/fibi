@@ -7,7 +7,7 @@ import styles from "./index.module.css";
 const Contact = () => {
   return (
     <div className={styles.page}>
-      <Pattern />
+      <Pattern mobileMini />
       <HeroSection />
     </div>
   );

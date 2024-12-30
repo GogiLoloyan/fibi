@@ -44,12 +44,27 @@
 
   @media (max-width: 768px) {
     background: radial-gradient(
-        ellipse 80% 50% at 70% 25%,
+        ellipse 80% 50% at 70% 5%,
         transparent 50%,
-        var(--color-n200) 60%
+        var(--color-n200) 80%
       ),
       radial-gradient(
-        ellipse 110% 100% at 80% 5%,
+        ellipse 110% 30% at 80% 5%,
+        transparent 20%,
+        var(--color-n200) 120%
+      );
+  }
+}
+
+.bgPatternContainerMobileMini .bgPatternGradient {
+  @media (max-width: 768px) {
+    background: radial-gradient(
+        ellipse 80% 50% at 70% -15%,
+        transparent 50%,
+        var(--color-n200) 80%
+      ),
+      radial-gradient(
+        ellipse 110% 30% at 80% -10%,
         transparent 20%,
         var(--color-n200) 120%
       );

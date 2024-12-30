@@ -7,7 +7,7 @@ import styles from "./index.module.css";
 const BookDemo = () => {
   return (
     <div className={styles.page}>
-      <Pattern />
+      <Pattern mobileMini />
       <HeroSection />
     </div>
   );

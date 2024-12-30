@@ -8,7 +8,7 @@ import BlobsSection from "./sections/BlobsSection";
 const Blog = () => {
   return (
     <div className={styles.page}>
-      <Pattern height={500} />
+      <Pattern mobileMini height={500} />
       <HeroSection />
       <BlobsSection />
     </div>

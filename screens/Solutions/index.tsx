@@ -12,7 +12,7 @@ import { metrics } from "../../data/solutions";
 const Solutions = () => {
   return (
     <div className={styles.page}>
-      <Pattern height={500} />
+      <Pattern mobileMini height={500} />
       <HeroSection />
       <div className={styles.metricSection}>
         <MetricsSection metrics={metrics} />

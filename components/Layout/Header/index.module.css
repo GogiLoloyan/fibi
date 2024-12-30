@@ -18,6 +18,7 @@
 }
 
 .logo {
+  display: flex;
   margin-bottom: 16px;
   min-width: 64px;
 

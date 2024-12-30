@@ -12,7 +12,7 @@ const HeroSection = () => {
   return (
     <Section className={styles.heroSection}>
       <div className={styles.heroSectionMain}>
-        <BrandMiniIcon lassName={styles.brandIcon} />
+        <BrandMiniIcon className={styles.brandIcon} />
         <h1
           className={`${styles.heroTitle} text-5xl leading-snug color-n700 font-medium`}
         >
