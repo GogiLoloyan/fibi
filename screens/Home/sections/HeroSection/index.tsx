@@ -14,7 +14,7 @@ const HeroSection = () => {
       <div className={styles.heroSectionMain}>
         <BrandMiniIcon className={styles.brandIcon} />
         <h1
-          className={`${styles.heroTitle} text-5xl leading-snug color-n700 font-medium`}
+          className={`${styles.heroTitle} leading-snug color-n700 font-medium`}
         >
           <b className="font-bold">Integrated</b> Systems,
           <br /> Simplified{" "}

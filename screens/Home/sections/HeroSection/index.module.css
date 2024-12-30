@@ -29,6 +29,7 @@
 .heroTitle {
   margin-bottom: 32px;
   pointer-events: all;
+  font-size: var(--font-size-5xl);
 
   @media (max-width: 768px) {
     font-size: 1.875rem;

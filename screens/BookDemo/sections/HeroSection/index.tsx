@@ -14,7 +14,7 @@ const HeroSection = () => {
     <Section className={styles.heroSection}>
       <div className={styles.innerSection}>
         <div className={styles.heroSectionMain}>
-          <h1 className={`${styles.heroTitle} text-4xl font-bold color-n800`}>
+          <h1 className={`${styles.heroTitle} font-bold color-n800`}>
             Experience Fibi in Action
           </h1>
           <p className={`${styles.heroSubTitle} color-n500`}>
