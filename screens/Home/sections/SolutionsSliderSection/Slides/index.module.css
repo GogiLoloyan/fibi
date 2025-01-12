@@ -38,8 +38,7 @@
 } */
 
 .content1 .messageBox {
-  width: 300px;
-  max-width: 300px;
+  width: 85%;
 
   @media (max-width: 768px) {
     width: 80%;
