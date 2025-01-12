@@ -6,22 +6,19 @@ import Swiper from "swiper";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import classNames from "classnames";
 
 import Button from "../../../../components/Button";
 import Section from "../../../../components/Section";
+import { slides } from "./Slides";
 
 import ArrowIcon from "../../../../public/icons/arrow.svg";
-import MessageBulkIcon from "../../../../public/icons/messages-bulk.svg";
-import CardTickIcon from "../../../../public/icons/card-tick.svg";
-import DesignIcon from "../../../../public/icons/design.svg";
-import PlayIcon from "../../../../public/icons/play.svg";
 
 import EffectMaterial from "./effect-material";
 import "./effect-material.css";
 import "./swiper-custom.css";
 
 import styles from "./index.module.css";
-import classNames from "classnames";
 
 const options: Swiper["params"] = {
   // pass EffectMaterial module to modules
@@ -34,7 +31,7 @@ const options: Swiper["params"] = {
     slideSplitRatio: 0.65,
   },
   centeredSlides: true,
-  initialSlide: 1,
+  initialSlide: 0,
   loop: true,
   grabCursor: true,
   slidesPerView: 1,
@@ -48,82 +45,13 @@ const options: Swiper["params"] = {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
-    // dynamicBullets: true,
+    dynamicBullets: true,
+    dynamicMainBullets: 1,
     // renderBullet: function (index, className) {
     //   return '<span class="' + className + '"></span>';
     // },
   },
 };
-
-type SlideItem = {
-  title: string;
-  subTitle: string;
-  icon: React.ReactNode;
-  gradient: string;
-  content?: React.ReactNode;
-};
-
-const slides: SlideItem[] = [
-  {
-    title: "Code-Free Website Builder",
-    subTitle: "No-code website builder for streaming services.",
-    icon: <DesignIcon />,
-    gradient: "linear-gradient(135deg, #ED0D92 0%, #B70A71 40%, #870753 100%)",
-  },
-  {
-    title: "In-Platform<br /> Messaging",
-    subTitle:
-      "Communicate with your team and clients with integrated in-platform messaging app.",
-    icon: <MessageBulkIcon />,
-    content: (
-      <div className={styles.content2}>
-        <div
-          className={classNames(styles.messageBox, styles.messageBoxSupport)}
-        >
-          <p>Support</p>
-          <p>Hey, how can I assist you?</p>
-        </div>
-        <div className={classNames(styles.messageBox, styles.messageBoxClient)}>
-          <p>Client</p>
-          <p>Hi, can you help me out with packages?</p>
-        </div>
-        <div
-          className={classNames(styles.messageBox, styles.messageBoxSupport)}
-        >
-          <p>Support</p>
-          <p>Sure, let me check your ID...</p>
-        </div>
-      </div>
-    ),
-    gradient: "linear-gradient(315deg, #4E256E 0%, #8930CF 100%)",
-  },
-  {
-    title: "Advanced Billing Integration",
-    subTitle:
-      "Manage payments with API integration and billing solutions for your video streaming business and OTT services.",
-    icon: <CardTickIcon />,
-    gradient: "linear-gradient(135deg, #ED0D92 0%, #B70A71 40%, #870753 100%)",
-  },
-  {
-    title: "Own Video Player",
-    subTitle: "Deliver HD video playback with a flexible, web-ready player.",
-    icon: <PlayIcon />,
-    gradient: "linear-gradient(315deg, #4E256E 0%, #8930CF 100%)",
-  },
-  {
-    title: "Code-Free Website Builder",
-    subTitle: "No-code website builder for streaming services.",
-    icon: <DesignIcon />,
-    gradient: "linear-gradient(135deg, #ED0D92 0%, #B70A71 40%, #870753 100%)",
-  },
-  {
-    title: "In-Platform Messaging",
-    subTitle:
-      "Communicate with your team and clients with integrated in-platform messaging app.",
-    icon: <MessageBulkIcon />,
-    gradient: "linear-gradient(315deg, #4E256E 0%, #8930CF 100%)",
-  },
-];
 
 const SolutionsSliderSection = () => {
   const router = useRouter();

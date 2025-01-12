@@ -1,0 +1,190 @@
+/*  common styles */
+
+.content {
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+
+  @media (max-width: 768px) {
+    gap: 8px;
+    width: unset;
+    max-width: unset;
+    margin-top: auto;
+  }
+}
+
+.messageBox {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 3px 4px #11182217;
+  background-color: var(--color-f-white);
+
+  @media (max-width: 768px) {
+    gap: 4px;
+    padding: 12px;
+    border-radius: 24px;
+  }
+}
+
+/* Content 1 */
+
+/* .content1 {
+} */
+
+.content1 .messageBox {
+  width: 300px;
+  max-width: 300px;
+
+  @media (max-width: 768px) {
+    width: 80%;
+    max-width: unset;
+  }
+}
+
+.content1 .messageBox p:first-of-type {
+  font-size: 13px;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+}
+
+.content1 .messageBox p:last-of-type {
+  font-size: 15px;
+  font-weight: 500;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+.content1 .messageBox.messageBoxSupport p {
+  color: var(--color-f-black);
+}
+
+.content1 .messageBox.messageBoxClient p {
+  color: var(--color-f-white);
+}
+
+.content1 .messageBox.messageBoxSupport {
+  border-bottom-right-radius: 0;
+  background-color: var(--color-f-white);
+  align-self: flex-end;
+}
+
+.content1 .messageBox.messageBoxClient {
+  border-bottom-left-radius: 0;
+  background-color: #ed0d92;
+  margin-right: auto;
+}
+
+/* Content 2 */
+
+.content2 {
+  margin-right: -40px;
+
+  @media (max-width: 768px) {
+    padding-left: 20px;
+    margin-right: -20px;
+  }
+}
+
+.content2 .messageBox {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+
+  @media (max-width: 768px) {
+    padding: 14px;
+  }
+}
+
+.content2 .messageBox p {
+  color: var(--color-f-black);
+}
+
+.content2 .messageBox p:first-of-type {
+  font-size: 15px;
+  font-weight: 500;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+.content2 .messageBox p:last-of-type {
+  font-size: 13px;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+}
+
+.content2 .messageBox.messageBoxShort {
+  margin-left: 80px;
+
+  @media (max-width: 768px) {
+    margin-left: 50px;
+  }
+}
+
+/* Content 3 */
+
+/* .content3 {
+} */
+
+.content3 .messageBox {
+  width: 78%;
+
+  @media (max-width: 768px) {
+    width: 84%;
+    padding: 9.5px 16px;
+  }
+}
+
+.content3 .messageBox p {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-f-black);
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+.content3 .messageBox:nth-child(1) {
+  margin-left: calc(1 * 11%);
+
+  @media (max-width: 768px) {
+    margin-left: calc(1 * 8%);
+  }
+}
+
+.content3 .messageBox:nth-child(2) {
+  margin-left: calc(0 * 11%);
+
+  @media (max-width: 768px) {
+    margin-left: calc(0 * 8%);
+  }
+}
+
+.content3 .messageBox:nth-child(3) {
+  margin-left: calc(1 * 11%);
+
+  @media (max-width: 768px) {
+    margin-left: calc(1 * 8%);
+  }
+}
+
+.content3 .messageBox:nth-child(4) {
+  margin-left: calc(2 * 11%);
+
+  @media (max-width: 768px) {
+    margin-left: calc(2 * 8%);
+  }
+}
